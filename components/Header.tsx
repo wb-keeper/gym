@@ -1,5 +1,13 @@
+import Nav from "@/components/Nav";
+
 const Header = () => {
-  return <header>Header</header>;
+  return (
+    <header>
+      <div className="container mx-auto">
+        <Nav containerStyles="bg-red-300 py-12" />
+      </div>
+    </header>
+  );
 };
 
 export default Header;
