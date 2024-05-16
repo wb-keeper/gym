@@ -21,6 +21,7 @@ const Nav = ({ containerStyles }: { containerStyles: string }) => {
             smooth
             spy
             activeClass="active"
+            className="cursor-pointer hover:text-accent transition-all"
             key={index}
           >
             {link.name}
