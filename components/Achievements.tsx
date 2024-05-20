@@ -64,7 +64,7 @@ const Achievements = () => {
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-16"
+          className="grid grid-cols-2 lg:grid-cols-4 gap-16"
         >
           {stats.map((stat, index) => (
             <motion.div
