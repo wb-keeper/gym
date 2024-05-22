@@ -5,6 +5,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FaCheck } from "react-icons/fa";
 import { MdClose } from "react-icons/md";
 import { Pagination } from "swiper/modules";
+import { before } from "node:test";
+import CustomButton from "@/components/CustomButton";
+import { motion } from "framer-motion";
 
 const membershipData = [
   {
@@ -130,9 +133,25 @@ const MembershipSlider = () => {
             <div className="py-5 px-[60px] border-b border-accent">
               <h4 className="h4">{item.title}</h4>
             </div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-            beatae deleniti dolores dolorum iusto labore magnam magni minima
-            quod soluta.
+            <div className="py-[30px] px-[60px]">
+              <ul className="flex flex-col gap-5 mb-7">
+                {item.benefits.map((benefit, index) => (
+                  <li className="flex items-center gap-2" key={index}>
+                    <benefit.icon className="text-accent text-lg" />
+                    {benefit.text}
+                  </li>
+                ))}
+              </ul>
+              <p className="text-accent mb-8 flex gap-16 items-center">
+                <sup className="text-4xl">$</sup>
+                <strong className="text-4xl">{item.price}</strong>
+                <em className="self-end text-2xl">/month</em>
+              </p>
+              <CustomButton
+                text="Buy now"
+                containerStyles="w-[196px] h-[62px]"
+              />
+            </div>
           </div>
         </SwiperSlide>
       ))}
