@@ -28,7 +28,7 @@ import Image from "next/image";
 import { hidden } from "next/dist/lib/picocolors";
 import { fadeIn } from "@/lib/variants";
 
-const brandContainerVarients = {
+const brandContainerVariants = {
   hidden: {
     opacity: 0,
   },
@@ -60,7 +60,7 @@ const Brands = () => {
     <section className="py-8" id="contact">
       <div className="container mx-auto">
         <motion.div
-          variants={brandContainerVarients}
+          variants={brandContainerVariants}
           initial="hidden"
           whileInView={"show"}
           viewport={{ once: false, amount: 0.3 }}
